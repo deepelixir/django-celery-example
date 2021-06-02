@@ -6,5 +6,5 @@ from .tasks import sleepy
 
 
 def index(request):
-    sleepy(10)
+    sleepy.delay(10)
     return HttpResponse("Hello index")
