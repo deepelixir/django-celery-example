@@ -7,5 +7,5 @@ from .tasks import sleepy,send_mail_task
 
 def index(request):
     #sleepy.delay(10)
-    send_mail_task()
+    send_mail_task.delay()
     return HttpResponse("Hello  email")
